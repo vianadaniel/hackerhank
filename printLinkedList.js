@@ -1,8 +1,8 @@
 const list = {
   data: 16,
-  next: { data: 13, next: { data: 13, next: null } },
+  next: { data: 13, next: { data: 73, next: null } },
 }
-console.log(list.next)
+
 function printLinkedList(head) {
   while (head) {
     console.log(head.data)
