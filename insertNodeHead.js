@@ -9,22 +9,18 @@ const list = {
   next: { data: 13, next: { data: 73, next: null } },
 }
 
-function insertNodeAtTail(head, data) {
+function insertNodeAtHead(head, data) {
   let newNode = new SinglyLinkedListNode(data)
   if (!head) {
     head = newNode
     return head
+  } else {
+    console.log(head)
+    newNode.next = head
+    head = newNode
+    console.log(head)
   }
-  let current = head
-  while (current.next) {
-    current = current.next
-  }
-  current.next = newNode
 
-  while (head) {
-    console.log(head.data)
-    head = head.next
-  }
   return head
 }
-insertNodeAtTail(list, 34)
+insertNodeAtHead(list, 34)
