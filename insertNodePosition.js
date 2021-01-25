@@ -1,4 +1,4 @@
-function insertNodeAtTail(head, data, position) {
+function insertNodeAtPosition(head, data, position) {
   let counter = 1
   let newnode = new SinglyLinkedListNode(data)
   let node = head
