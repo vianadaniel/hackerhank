@@ -1,3 +1,5 @@
+require("util").inspect.defaultOptions.depth = null
+
 class SinglyLinkedListNode {
   constructor(data) {
     this.data = data
@@ -16,20 +18,20 @@ function deleteNode(head, position) {
 
   if (position == 0) {
     head = head.next
+    console.log(head)
     return head
+  } else {
+    while (counter < position) {
+      prevNode = node
+      node = node.next
+      counter++
+    }
+    console.log("prev", prevNode)
+    console.log("node", node)
+
+    prevNode.next = node.next
   }
-
-  while (counter < position) {
-    prevNode = node
-    node = node.next
-    counter++
-  }
-  console.log("prev", prevNode)
-  console.log("node", node)
-
-  prevNode.next = node.next ? node.next : null
-
   console.log(head)
   return head
 }
-deleteNode(list, 2)
+deleteNode(list, 1)

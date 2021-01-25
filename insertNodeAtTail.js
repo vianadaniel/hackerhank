@@ -1,3 +1,4 @@
+require("util").inspect.defaultOptions.depth = null
 class SinglyLinkedListNode {
   constructor(data) {
     this.data = data
@@ -21,10 +22,7 @@ function insertNodeAtTail(head, data) {
   }
   current.next = newNode
 
-  while (head) {
-    console.log(head.data)
-    head = head.next
-  }
+  console.log(head)
   return head
 }
 insertNodeAtTail(list, 34)
