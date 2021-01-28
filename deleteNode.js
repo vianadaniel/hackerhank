@@ -31,7 +31,7 @@ function deleteNode(head, position) {
 
     prevNode.next = node.next
   }
-  console.log(head)
+
   return head
 }
-deleteNode(list, 1)
+deleteNode(list, 2)
