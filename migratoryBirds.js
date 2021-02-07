@@ -20,12 +20,25 @@ function bird(arr) {
       arrResult.push(type)
     }
   })
+
+  return arrResult[0]
+  // const countMap = {};
+  // let result = []
+
+  // for (const element of arr) {
+  //   if (countMap[element]) {
+  //     countMap[element] += 1;
+  //   } else {
+  //     countMap[element] = 1;
+  //   }
+  // }
+
+  // let bigestValue = Math.max(...Object.values(countMap))
+
   // for (const [key, value] of Object.entries(countMap)){
   //   if(Number(value) === bigestValue){
   //     result = [...result, key]
   //   }
   // }
-  // console.log(arrResult[0])
-  return arrResult[0]
 }
 bird(arr)

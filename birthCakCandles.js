@@ -10,7 +10,6 @@ function birthCakCandles(candles) {
     }
   }
   return result
-  console.log(result)
 }
 
 birthCakCandles(candles)
