@@ -10,6 +10,7 @@ function bird(arr) {
     console.log(acc)
     return acc
   }, {})
+  console.log(freqObject)
   var arrResult = []
   const highest = Math.max(...Object.values(freqObject))
   // console.log(highest, "maior")
