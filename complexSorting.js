@@ -51,7 +51,7 @@ function byBirthday(a, b) {
     }
 }
 
-// buttton sort REACT
+// button sort REACT
 
 // const allCategories = ['All', ...new Set(people.map(item => item.city))];
 // console.log(allCategories)
