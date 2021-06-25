@@ -5,29 +5,24 @@ $c = [[8, 3, 4],
       [1, 5, 9], 
        [6, 7, 2]]
 
-function square($s, $c) {
-    var sum = []
-    var result = 0
-    for(var i = 0; i < $s[0].length; i++){
-       if($s[0][i] !== $c[0][i]){
-        sum.push(Math.abs($s[0][i] - $c[0][i]))
-       }
-    }
-    for(var i = 0; i < $s[0].length; i++){
-        if($s[1][i] !== $c[1][i]){
-         sum.push(Math.abs($s[1][i] - $c[1][i]))
-        }
-     }
-     for(var i = 0; i < $s[0].length; i++){
-        if($s[2][i] !== $c[2][i]){
-            
-         sum.push(Math.abs($s[2][i] - $c[2][i]))
-        }
-     }
-     for (var i=0; i<sum.length; i++){
-  
-        result += sum[i]
-}  
-   return result
+function square(s) {
+   let
+   n = 8,
+   costs = Array(n).fill(0),
+   magic = [[4, 3, 8], [9, 5, 1], [2, 7, 6]]
+
+for (let i = 0; i < n; i++) {
+   const isEven = i % 2 === 0
+
+   magic.forEach(([ a, b, c ], j) => {
+       costs[i] += Math.abs(s[isEven ? 0 : 2][j] - a)
+       costs[i] += Math.abs(s[1][j] - b)
+       costs[i] += Math.abs(s[isEven ? 2 : 0][j] - c)
+   })
+
+   if (isEven) s = [0, 1, 2].map(j => [s[2][j], s[1][j], s[0][j]])
 }
-square($s, $c)
+
+return Math.min(...costs)
+}
+console.log(square($c))
