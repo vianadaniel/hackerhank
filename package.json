@@ -1,0 +1,14 @@
+{
+  "name": "hackerhank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "agrupamento.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.17"
+  }
+}
