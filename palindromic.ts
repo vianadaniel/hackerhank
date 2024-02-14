@@ -1,6 +1,3 @@
-
-
-
 const words = ["abc","car","ada","racecar","cool"]
 
 function firstPalindrome(words: string[]): string {
