@@ -42,7 +42,7 @@ function findLeastNumOfUniqueInts(arr, k) {
 };
 
 
-test("should reverse string", t => {
+test("should pass", t => {
     const testCases = [{
         input: [5, 5, 4],
         output: 1,

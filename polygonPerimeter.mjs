@@ -36,7 +36,7 @@ function largestPerimeter(nums) {
 };
 
 
-test("should reverse string", t => {
+test("should pass", t => {
     const testCases = [{
         input: [5, 5, 5],
         output: 15
