@@ -13,3 +13,11 @@ fi
 for ((i = 1; i <= 99; i += 2)); do
     echo $i
 done
+
+
+#!bin/bash
+
+while read line;
+do
+    echo "${line}" | cut -c3
+done
